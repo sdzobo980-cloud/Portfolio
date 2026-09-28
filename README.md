@@ -1,65 +1,54 @@
-# hello
-# package.json
-```
-{
-  "name": "react-example",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@base-ui/react": "^1.8.0",
-    "@fontsource-variable/inter": "^5.3.0",
-    "// @google/genai": "^2.4.0", // NOT NEEDED: Only for Google Gemini AI features
-    "// @mdx-js/react": "^3.1.1", // NOT NEEDED: Only if rendering Markdown as components
-    "// @mdx-js/rollup": "^3.1.1", // NOT NEEDED: Only if building Markdown pages
-    "@tailwindcss/vite": "^4.1.14",
-    "// @tanstack/react-query": "^5.103.2", // NOT NEEDED: Only for complex API caching/fetching
-    "@vitejs/plugin-react": "^5.0.4",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "// dotenv": "^17.2.3", // NOT NEEDED: Vite handles environment variables natively
-    "// express": "^4.21.2", // NOT NEEDED: Backend server framework, not for browsers
-    "lucide-react": "^0.546.0",
-    "// motion": "^12.23.24", // NOT NEEDED: Heavy animation library, use Tailwind instead
-    "react": "^19.0.1",
-    "react-dom": "^19.0.1",
-    "react-router-dom": "^7.18.4",
-    "// remark-frontmatter": "^5.0.0", // NOT NEEDED: Markdown metadata parser
-    "// remark-mdx-frontmatter": "^6.0.0", // NOT NEEDED: Markdown metadata parser
-    "shadcn": "^4.21.0",
-    "sonner": "^2.0.8",
-    "tailwind-merge": "^3.7.0",
-    "tw-animate-css": "^1.4.0",
-    "vite": "^6.2.3",
-    "// zustand": "^5.0.15" // NOT NEEDED: Global state management, use standard React hooks
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "// @types/express": "^4.17.21", // NOT NEEDED: TypeScript types for Express backend
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "autoprefixer": "^10.4.21",
-    "esbuild": "^0.25.0",
-    "eslint": "^10.11.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.7",
-    "globals": "^17.12.0",
-    "prettier": "^3.9.8",
-    "prettier-plugin-tailwindcss": "^0.8.1",
-    "tailwindcss": "^4.1.14",
-    "// tsx": "^4.21.0", // NOT NEEDED: Runs TS files in Node, Vite handles this for the frontend
-    "typescript": "~5.8.2",
-    "typescript-eslint": "^8.70.1",
-    "vite": "^6.2.3"
-  }
-}
-```
+# Hi, I'm Simbarashe Dzobo 👋
+
+<p align="center">
+  <img src="public/images/hero.png" alt="Simbarashe Dzobo Logo" width="120" />
+</p>
+
+## About Me
+
+I'm **Simbarashe Dzobo**, a Computer Engineer and recent graduate of the **European University of Lefke**.
+
+My interest in technology started with a curiosity about how computers work beyond what we see on the screen. That curiosity eventually led me to Computer Engineering, where I developed an interest in the relationship between **hardware, software, and intelligent systems**.
+
+Throughout my studies, I worked on projects ranging from **microcontrollers and embedded systems to web applications and AI-based projects**. These experiences helped me develop not only technical skills, but also a stronger ability to analyse problems, troubleshoot systems, develop ideas, and turn them into working projects.
+
+Today, I am particularly interested in **embedded systems, hardware, and autonomous technologies**, while continuing to expand my software and AI capabilities.
+
+## My Journey
+
+**Curiosity → Computer Engineering → Hardware & Software → Embedded Systems → Autonomous Technologies**
+
+I am still early in my professional journey, but I am focused on continuously learning, building, and gaining real-world engineering experience.
+
+My long-term goal is to contribute to the development of innovative autonomous technologies and eventually build systems that solve meaningful problems.
+
+## What I Can Do
+
+* Develop web-based applications
+* Program microcontrollers using C
+* Work with Arduino and ESP32
+* Build hardware-software systems
+* Develop applications using Python and Django
+* Work with databases
+* Develop AI and computer vision projects
+* Analyse and troubleshoot technical problems
+* Turn ideas into practical projects
+
+## What I'm Looking For
+
+I'm currently open to **full-time opportunities, engineering roles, internships, collaborations, and meaningful projects** where I can contribute, learn, and grow as an engineer.
+
+If you're looking for a **Computer Engineer who enjoys learning, solving problems, working with technology, and building things**, I'd be happy to connect.
+
+### Let's Work Together
+
+**Hiring?** Let's talk.
+
+**Building something?** Let's collaborate.
+
+**Have an interesting engineering problem?** I'd like to hear about it.
+
+---
+
+**Simbarashe Dzobo**
+Computer Engineer | Embedded Systems | Hardware & Software | Autonomous Technologies
