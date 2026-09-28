@@ -1,0 +1,207 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Fonts as requested */
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   1. RAW HEX COLORS (Zimbabwean Maroon & Cinematic High-Contrast)
+   ============================================================ */
+:root {
+  /* Light Mode: Elegant Editorial Tech Grid */
+  --raw-bg: #faf2e8;
+  --raw-text: #1d1d22;
+  --brand: #6b1d2f;
+  --accent: #4a121e;
+  --contrast: #0d0d10;
+  color-scheme: light;
+}
+
+.dark {
+  /* Dark Mode: Cyber-Charcoal & Glowing Maroon */
+  --raw-bg: #0d0d10;
+  --raw-text: #eadecc;
+  --brand: #da4b68;
+  --accent: #a82e46;
+  --contrast: #faf2e8;
+  color-scheme: dark;
+}
+
+/* ============================================================
+   2. DERIVED TOKENS — Perfectly Balanced Type and Hierarchy
+   ============================================================ */
+:root,
+.dark {
+  /* Core Base Properties */
+  --bg: var(--raw-bg);
+  --text: var(--raw-text);
+
+  /* Text Architecture */
+  --text-h: var(--contrast); /* Distinct stark color for structural headings */
+  --text-muted: color-mix(
+    in srgb,
+    var(--raw-text) 65%,
+    transparent
+  ); /* Subtitles & micro-copy */
+
+  /* Borders and Clean Fills */
+  --border: color-mix(in srgb, var(--raw-text) 12%, transparent);
+  --code-bg: color-mix(in srgb, var(--raw-bg) 92%, var(--raw-text) 8%);
+
+  /* Brand Accents */
+  --brand-bg: color-mix(in srgb, var(--brand) 10%, transparent);
+  --brand-border: color-mix(in srgb, var(--brand) 30%, transparent);
+
+  /* Shadcn Surfaces — Tinted layout steps cleanly detached from the background */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: color-mix(in srgb, var(--bg) 95%, var(--contrast) 5%);
+  --card-foreground: var(--text);
+  --popover: var(--card);
+  --popover-foreground: var(--text);
+
+  /* UI Contrast Poles */
+  --primary: var(--contrast);
+  --primary-foreground: var(--bg);
+
+  --secondary: color-mix(in srgb, var(--bg) 90%, var(--contrast) 10%);
+  --secondary-foreground: var(--text);
+  --muted: color-mix(in srgb, var(--bg) 93%, var(--contrast) 7%);
+  --muted-foreground: var(--text-muted);
+
+  /* Interactive Elements */
+  --accent-surface: var(--secondary);
+  --accent-foreground: var(--contrast);
+
+  --destructive: light-dark(
+    oklch(0.577 0.245 27.325),
+    oklch(0.704 0.191 22.216)
+  );
+
+  --input: color-mix(in srgb, var(--raw-text) 16%, transparent);
+  --ring: color-mix(in srgb, var(--brand) 70%, transparent);
+
+  /* Clean 5-step brown-skin ramp */
+  --chart-1: var(--brand);
+  --chart-2: color-mix(in srgb, var(--brand) 75%, var(--contrast) 25%);
+  --chart-3: color-mix(in srgb, var(--brand) 50%, var(--contrast) 50%);
+  --chart-4: color-mix(in srgb, var(--brand) 30%, var(--contrast) 70%);
+  --chart-5: var(--contrast);
+
+  /* Sidebar configuration */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--text);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: var(--bg);
+  --sidebar-accent: var(--accent-surface);
+  --sidebar-accent-foreground: var(--contrast);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  --radius: 0.625rem; /* Slightly softer modern curves */
+}
+
+/* ============================================================
+   3. TAILWIND THEME MAPPING
+   ============================================================ */
+@theme {
+  --color-app-bg: var(--bg);
+  --color-app-text: var(--text);
+  --color-app-heading: var(--text-h);
+  --color-app-text-muted: var(--text-muted);
+  --color-app-border: var(--border);
+  --color-app-code: var(--code-bg);
+  --color-app-brand: var(--brand);
+  --color-app-brand-bg: var(--brand-bg);
+  --color-app-brand-border: var(--brand-border);
+
+  --font-sans: "Inter Variable", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent-surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+/* ============================================================
+   4. UTILITIES & TYPOGRAPHY IMPLEMENTATION
+   ============================================================ */
+@utility card-base {
+  background-color: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility badge-accent {
+  background-color: var(--brand-bg);
+  color: var(--brand);
+  border: 1px solid var(--brand-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+@layer base {
+  body {
+    @apply bg-app-bg text-app-text antialiased;
+  }
+
+  /* Structural, crisp headings using the absolute contrast poles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-app-heading font-semibold tracking-tight;
+  }
+
+  /* Optional Special Colored Titles Helper */
+  .title-colored {
+    @apply text-app-brand font-bold tracking-tight;
+  }
+}
